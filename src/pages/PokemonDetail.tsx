@@ -1,18 +1,6 @@
 import { useHistory, useParams } from 'react-router-dom';
-import { MainDetail } from '../components';
+import { DetailBox, MainDetail } from '../components';
 import { usePokemonDetail } from '../hooks/usePokemonDetail';
-
-type DetailBoxProps = {
-  value: string;
-};
-
-const DetailBox = ({ value }: DetailBoxProps) => {
-  return (
-    <li className="w-full list-none">
-      <div className="bg-amber-500 rounded-md capitalize text-center text-white font-bold p-1">{value}</div>
-    </li>
-  );
-};
 
 export const PokemonDetail = () => {
   const params: Record<string, string> = useParams();
